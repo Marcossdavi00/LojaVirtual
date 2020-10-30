@@ -1,0 +1,54 @@
+﻿@model Domain.DTO.SaleDTO
+
+@{
+    ViewData["Title"] = "TestCarrinho";
+}
+
+<h1>TestCarrinho</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Quantidade
+            </th>
+            <th>
+                Desconto
+            </th>
+            <th>
+                Preço Unitário
+            </th><th>
+                Preço Total do Produtor
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+                @foreach (var i in Model.products)
+                {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => i.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => i.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => i.Discont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => i.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => i.TotalPriceProduct)
+            </td>
+        </tr>
+                }
+    </tbody>
+</table>

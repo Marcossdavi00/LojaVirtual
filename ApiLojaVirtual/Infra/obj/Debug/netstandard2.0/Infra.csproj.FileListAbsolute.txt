@@ -1,0 +1,7 @@
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Infra\bin\Debug\netstandard2.0\Infra.deps.json
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Infra\bin\Debug\netstandard2.0\Infra.dll
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Infra\obj\Debug\netstandard2.0\Infra.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Infra\obj\Debug\netstandard2.0\Infra.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Infra\obj\Debug\netstandard2.0\Infra.AssemblyInfo.cs
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Infra\bin\Debug\netstandard2.0\CrossCutting.dll
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Infra\bin\Debug\netstandard2.0\Domain.dll

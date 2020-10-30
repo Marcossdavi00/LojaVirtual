@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Domain.Entity.ProductEntity>
+
+
+@{
+    ViewData["Title"] = "ListProduct";
+}
+
+<h1>Lista de Produtos</h1>
+
+@using (Html.BeginForm("BuscarPorNome", "Products", FormMethod.Get))
+{
+    <p>
+        Buscar produto: @Html.TextBox("Name")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+<p>
+    <a asp-controller="Products" asp-action="Create">Novo Produto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Preço
+            </th>
+            <th>
+                Desconto
+            </th>
+            <th>
+                Estoque
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                   R$@Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discount)%
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </td>
+                <td>
+                    <form asp-controller="Products" asp-action="AddProduct" method="post">
+                        <input type="hidden" name="Id" value="@Html.DisplayFor(modelItem => item.Id)" />
+                        <input type="number" name="Quantidade">
+                        <button class="btn btn-primary">Adicionar ao Carrinho</button>
+                    </form>
+                </td>
+                <td>
+                    <form asp-controller="Products" asp-action="Edit" method="get">
+                        <input type="hidden" name="Id" value="@Html.DisplayFor(modelItem => item.Id)" />
+                        <button class="btn btn-success">Editar</button>
+                    </form>
+                </td>
+                <td>
+                    <form asp-controller="Products" asp-action="Delete" method="post">
+                        <input type="hidden" name="Id" value="@Html.DisplayFor(modelItem => item.Id)" />
+                        <button class="btn btn-danger">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

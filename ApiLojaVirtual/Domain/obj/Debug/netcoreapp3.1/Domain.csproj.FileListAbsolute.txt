@@ -1,0 +1,8 @@
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Users\HP\Desktop\Projeto Loja Virtual\ApiLojaVirtual\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
