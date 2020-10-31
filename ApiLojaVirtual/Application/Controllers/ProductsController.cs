@@ -5,6 +5,7 @@ using Domain.Interfaces.Service;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -138,9 +139,20 @@ namespace Application.Controllers
                 {
                     return RedirectToAction(nameof(ListProduct));
                 }
+
+                    foreach (var i in itens)
+                    {
+                        if(i.Id == id)
+                        {
+                            i.Amount = i.Amount + quantidade;
+
+                            return RedirectToAction(nameof(ListProduct));
+                        }
+                    }
+
                 var result = await _service.FindById(id);
 
-                itens.Add(new ProductDto { Id = result.Id,Name = result.Name, Price = result.Price, Discont = result.Discount, Amount = quantidade });
+                itens.Add(new ProductDto { Id = result.Id, Name = result.Name, Price = result.Price, Discont = result.Discount, Amount = quantidade });
 
                 return RedirectToAction(nameof(ListProduct));
             }
@@ -155,6 +167,11 @@ namespace Application.Controllers
         {
             try
             {
+                if(itens == null)
+                {
+                    return RedirectToAction(nameof(ListProduct));
+                }
+
                 SaleDTO venda = new SaleDTO() { products = itens};
 
                 var result = await _sale.AddCarrinho(venda);

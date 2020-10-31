@@ -52,22 +52,26 @@
                     @Html.DisplayFor(modelItem => item.Stock)
                 </td>
                 <td>
-                    <form asp-controller="Products" asp-action="AddProduct" method="post">
+                    <form asp-controller="Products" asp-action="AddProduct" method="post" style="float:right">
                         <input type="hidden" name="Id" value="@Html.DisplayFor(modelItem => item.Id)" />
-                        <input type="number" name="Quantidade">
-                        <button class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <input type="number" name="Quantidade" style="width:50px; height:30px">
+                        <button class="btn btn-primary">
+                            <img src="~/img/carrinho2.png" height="14" width="15"/>
+                        </button>
                     </form>
                 </td>
                 <td>
-                    <form asp-controller="Products" asp-action="Edit" method="get">
+                    <form asp-controller="Products" asp-action="Edit" method="get" style="float:right">
                         <input type="hidden" name="Id" value="@Html.DisplayFor(modelItem => item.Id)" />
-                        <button class="btn btn-success">Editar</button>
+                        <button class="btn btn-success">
+                            <img src="~/img/lapis.png" height="14" width="15"/>
+                        </button>
                     </form>
                 </td>
                 <td>
                     <form asp-controller="Products" asp-action="Delete" method="post">
                         <input type="hidden" name="Id" value="@Html.DisplayFor(modelItem => item.Id)" />
-                        <button class="btn btn-danger">Deletar</button>
+                        <button class="btn btn-danger">X</button>
                     </form>
                 </td>
             </tr>
